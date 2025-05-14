@@ -1,0 +1,193 @@
+body, html {
+    margin: 0;
+    padding: 100;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: grey;
+}
+
+.navbar {
+    display: flex;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: grey;
+    color: grey;
+    
+}
+.navbar img {
+    margin-right: 400px;
+}
+.navbar h1, .navbar nav {
+    margin: 100px;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: grey;
+  }
+
+.logo{
+    width: 200px;
+    align-items:left;
+}
+.sign-up-btn {
+    background-color: hsl(29, 89%, 48%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+main {
+    margin: 0 auto; 
+    max-width: 15000px; 
+    padding: 25px; /
+
+}
+
+.hero {
+    text-align: left;
+    color: white;
+    background-color: grey;
+    padding: 300px;
+    font-size: xx-large;
+}
+
+.hero h2 {
+    margin: 20px 0;
+}
+.hero img {
+    display: block;
+    float: left;
+    margin-right:20px;
+}
+
+.browse-btn {
+    background-color: hsl(29, 89%, 48%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.footer {
+    background-color: grey;
+    color:  hsl(29, 89%, 48%);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer a {
+    color: hsl(29, 89%, 48%);
+    text-decoration: none;
+}
+
+.parallax {
+    background-image: url("gymcover.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  * {
+box-sizing: border-box;
+}
+.container {
+position: relative;
+}
+
+.mySlides {
+display: none;
+}
+
+.cursor {
+cursor: pointer;
+}
+
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+top: 40%;
+width: auto;
+padding: 16px;
+margin-top: -50px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+background-color: grey;
+}
+
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+.caption-container {
+text-align: center;
+background-color: grey;
+padding: 2px 16px;
+color: white;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.column {
+float: left;
+width: 16.66%;
+}
+
+.demo {
+opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+opacity: 1;
+}
+

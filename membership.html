@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title> Sally's Gymnastics</title>
+   <link rel="stylesheet" href="index.css"/>
+   <link rel="stylesheet" href="membership.css"/>
+   <script src="prices.js" defer> </script>  
+     <script>
+        function calculateCost() {
+            var planCost = parseFloat(document.querySelector('input[name="plan"]:checked').value);
+            var subtotal = planCost;
+            var tax = subtotal * 0.0875;
+            var total = subtotal + tax;
+            document.getElementById('planCost').value = planCost.toFixed(2);
+            document.getElementById('subtotal').value = subtotal.toFixed(2);
+            document.getElementById('salesTax').value = tax.toFixed(2);
+            document.getElementById('totalCost').value = total.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+   <header>
+      <div class="navbar">
+          <img src="logo.png" alt="gymlogo" class="logo"/>
+          <nav>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="programs.html">Programs</a></li>
+              </ul> 
+          </nav>
+      </div>
+  </header>
+    <section id="summary">
+       <h1>Become One Of Us!</h1>
+       <p>Since every fitness journey is unique, Sally's Gymnastics offers customizable membership choices tailored to your needs. 
+         We offer a plan that suits your lifestyle, whether you're looking for a long-term commitment or something more flexible. 
+         There are no hidden fees, and our prices are competitive and transparent. 
+         There is something for every budget, including family packages, monthly subscriptions, and single-class passes. 
+         Additionally, our membership tiers include added perks like exclusive classes, personal training, and item discounts. 
+         Join our fitness community now to begin achieving your wellness and health objectives with Sally's Gymnastics.
+       </p>
+    </section>
+    
+    <section id="orderSection">
+       <form id="orderForm" name="orderForm" method="get" action="ordersubmit.html" onsubmit="calculateCost(); return false;">
+         <table id="orderTable">
+            <caption> Membership prices </caption>
+            <tr>            
+               <td>
+                  <input type="text" name="modelCost" id="modelCost" size="10" readonly />
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"> 
+                  <fieldset>
+                     <legend>Protection Plan</legend>
+                     <input type="radio" id="plan_0" name="plan" value="0" checked /> <label for="plan_0"> 1 week free trial ($0.00)</label><br>
+                     <input type="radio" id="plan_1" name="plan" value="19.99" /> <label for="plan_1"> Basic Plan ($19.99)</label><br>
+                     <input type="radio" id="plan_2" name="plan" value="23.49" /> <label for="plan_2"> Premium Plan  ($23.49)</label><br>
+                     <input type="radio" id="plan_3" name="plan" value="27.95"  /> <label for="plan_3"> Platinum Card ($27.95)</label>
+                  </fieldset>
+                  <input type="hidden" id="planName" name="planName" />
+               </td>
+               <td>
+                  <input type="text" name="planCost" id="planCost" size="10" readonly />
+               </td>
+            </tr>        
+            <tr>
+               <td colspan="2" class="rightA">Subtotal</td>
+               <td class="outcell">
+                  <input type="text" name="subtotal" id="subtotal" size="10" readonly />
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="rightA">Tax (8.75%)</td>
+               <td>
+                  <input type="text" name="salesTax" id="salesTax" size="10" readonly />
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="rightA">TOTAL</td>
+               <td>
+                  <input type="text" name="totalCost" id="totalCost" size="10" readonly />
+               </td>
+            </tr>
+         </table>
+         <input type="submit" id="buttonAdd" value="add to cart" />
+       </form>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2025 Sally's Gymnastics | 456 Dean Street, New York, NY 10001 | Phone: (123) 456-7890</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#"> tik-tok </a></p>
+    </footer>
+ </body>
+ </html>
